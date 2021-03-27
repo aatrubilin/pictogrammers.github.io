@@ -376,6 +376,15 @@
         footer a:hover {
             text-decoration: underline;
         }
+        input.search {
+            width: 100%;
+            background: #F1F1F1;
+            border: none;
+            border-bottom: 1px solid #DDD;
+        }
+        input.search:focus{
+            outline: none;
+        }
     </style>
     <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
 </head>
@@ -385,7 +394,7 @@
         <svg>
             <path d="M0,0H8V3H18V0H26V8H23V18H26V26H18V23H8V21H18V18H21V8H18V5H8V8H5V18H8V26H0V18H3V8H0V0M2,2V6H6V2H2M2,20V24H6V20H2M20,2V6H24V2H20M20,20V24H24V20H20Z"></path>
         </svg>
-        Material Design Icons
+        Material Design Icons for HA
         <span class="version">5.9.55</span>
         <code id="npm" title="Copy to Clipboard">
             <svg viewBox="0 0 24 24">
@@ -395,220 +404,11 @@
         </code>
     </h1>
 
-    <h2 class="usage">Usage</h2>
-    <pre><code>&lt;span class=&quot;mdi mdi-<span id="name">name</span>&quot;&gt;&lt;/span&gt;</code></pre>
-
-    <blockquote class="note">
-        Click the icon, hex codepoint, or name below to copy the value to your clipboard.
-    </blockquote>
-
-    <h2 class="newicons"><span>New</span> Icons <small id="newIconsCount">-</small></h2>
-    <div class="icons" id="newIcons"></div>
+    <h2 class="usage">Search icon</h2>
+    <pre><input type="text" class="search" id="search"></pre>
 
     <h2 class="icons">All Icons <small id="iconsCount">-</small></h2>
     <div class="icons" id="icons"></div>
-
-    <h2 class="deprecatedicons"><span>Deprecated</span> Icons <small id="deprecatedIconsCount">-</small></h2>
-    <p class="deprecated" id="deprecated">
-        Deprecated icons will be removed in a future major release.
-    </p>
-    <div class="icons" id="deprecatedIcons"></div>
-
-    <h2 class="extras">Extras</h2>
-
-    <p class="extras">The helper CSS classes are listed below.</p>
-
-    <section>
-        <h3>Size</h3>
-
-        <div class="examples examples-size">
-            <div>
-                <div>
-                    <i class="mdi mdi-18px mdi-account"></i>
-                </div>
-                <div>
-                    <code>mdi-18px</code>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <i class="mdi mdi-24px mdi-account"></i>
-                </div>
-                <div>
-                    <code>mdi-24px</code>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <i class="mdi mdi-36px mdi-account"></i>
-                </div>
-                <div>
-                    <code>mdi-36px</code>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <i class="mdi mdi-48px mdi-account"></i>
-                </div>
-                <div>
-                    <code>mdi-48px</code>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <h3>Rotate</h3>
-
-    <div class="examples">
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-account"></i>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-rotate-45 mdi-account"></i>
-            </div>
-            <div>
-                <code>mdi-rotate-45</code> 
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-rotate-90 mdi-account"></i>
-            </div>
-            <div>
-                <code>mdi-rotate-90</code>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-rotate-135 mdi-account"></i>
-            </div>
-            <div>
-                <code>mdi-rotate-135</code>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-rotate-180 mdi-account"></i>
-            </div>
-            <div>
-                <code>mdi-rotate-180</code>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-rotate-225 mdi-account"></i>
-            </div>
-            <div>
-                <code>mdi-rotate-225</code>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-rotate-270 mdi-account"></i>
-            </div>
-            <div>
-                <code>mdi-rotate-270</code>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-rotate-315 mdi-account"></i>
-            </div>
-            <div>
-                <code>mdi-rotate-315</code> 
-            </div>
-        </div>
-    </div>
-
-    <h3>Flip</h3>
-
-    <div class="examples">
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-account-alert"></i>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-flip-h mdi-account-alert"></i>
-            </div>
-            <div>
-                <code>mdi-flip-h</code> 
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-flip-v mdi-account-alert"></i>
-            </div>
-            <div>
-                <code>mdi-flip-v</code> 
-            </div>
-        </div>
-    </div>
-
-    <p class="note"><strong>Note:</strong> We do not include the ability to use <code>mdi-flip-*</code> and
-        <code>mdi-rotate-*</code> at the same time.</p>
-
-    <h3>Spin</h3>
-
-    <div class="examples">
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-spin mdi-loading"></i>
-            </div>
-            <div>
-                <code>mdi-spin</code>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-spin mdi-star"></i>
-            </div>
-            <div>
-                <code>mdi-spin</code>
-            </div>
-        </div>
-    </div>
-
-    <h3>Color</h3>
-
-    <div class="examples">
-        <div>
-            <div class="dark">
-                <i class="mdi mdi-36px mdi-light mdi-account dark-demo"></i>
-            </div>
-            <div>
-                <code>mdi-light</code>
-            </div>
-        </div>
-        <div>
-            <div class="dark">
-                <i class="mdi mdi-36px mdi-light mdi-inactive mdi-account dark-demo"></i>
-            </div>
-            <div>
-                <code>mdi-light mdi-inactive</code>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-dark mdi-account"></i>
-            </div>
-            <div>
-                <code>mdi-dark</code>
-            </div>
-        </div>
-        <div>
-            <div>
-                <i class="mdi mdi-36px mdi-dark mdi-inactive mdi-account"></i>
-            </div>
-            <div>
-                <code>mdi-dark mdi-inactive</code> 
-            </div>
-        </div>
-    </div>
 
     <footer>
         <div>
@@ -621,6 +421,22 @@
     </footer>
 
     <script type="text/javascript">
+        var searchInput = document.getElementById("search");
+        function searchIcons() {
+            if (searchInput.value) {
+                var regPhrase = new RegExp(searchInput.value, 'i');
+                for (let element of document.querySelectorAll('.icon-block')) {
+                  element.style.display = regPhrase.test(element.dataset.name) ? "block" : "none";
+                }
+            } else {
+                for (let element of document.querySelectorAll('.icon-block')) {
+                  element.style.display = "block";
+                }
+            }
+            
+        }
+        searchInput.addEventListener('keyup', searchIcons, false);
+
         function isNew(icon) {
             return icon.version === '5.9.55';
         }
@@ -648,17 +464,16 @@
         function getIconItem(icon, isNewIcon, isDeprecatedIcon) {
             var div = document.createElement('div'),
                 i = document.createElement('i');
+            div.dataset.name = icon.name;
+            div.className = "icon-block";
             i.className = 'mdi mdi-' + icon.name;
             div.appendChild(i);
             var code = document.createElement('code');
             code.appendChild(document.createTextNode(icon.hex));
             div.appendChild(code);
             var span = document.createElement('span');
-            span.appendChild(document.createTextNode('mdi-' + icon.name));
+            span.appendChild(document.createTextNode('mdi:' + icon.name));
             div.appendChild(span);
-            span.onclick = function () {
-                document.getElementById('name').innerHTML = icon.name;
-            };
             i.onmouseup = function () {
                 copyText(String.fromCodePoint(parseInt(icon.hex, 16)));
             };
@@ -666,13 +481,13 @@
                 copyText(icon.hex);
             };
             span.onmouseup = function () {
-                copyText('mdi-' + icon.name);
+                copyText('mdi:' + icon.name);
             };
             if (isNewIcon) {
-                div.className = 'new';
+                div.className = 'new icon-block';
             }
             if (isDeprecatedIcon) {
-                div.className = 'deprecated';
+                div.className = 'deprecated icon-block';
             }
             return div;
         }
@@ -685,16 +500,6 @@
             icons.forEach(function (icon) {
                 var item = getIconItem(icon, isNew(icon), isDeprecated(icon));
                 document.getElementById('icons').appendChild(item);
-                if (isNew(icon)) {
-                    var newItem = getIconItem(icon, false, false);
-                    document.getElementById('newIcons').appendChild(newItem);
-                    newIconsCount++;
-                }
-                if (isDeprecated(icon)) {
-                    var deprecatedItem = getIconItem(icon, false, false);
-                    document.getElementById('deprecatedIcons').appendChild(deprecatedItem);
-                    deprecatedIconsCount++;
-                }
                 iconsCount++;
             });
             var whereDeprecated = function (icon) {
